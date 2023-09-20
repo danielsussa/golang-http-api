@@ -339,7 +339,7 @@ func (h HTTPApi) processResponse(resp *http.Response) ([]byte, error) {
 		responseBody, _ = ioutil.ReadAll(resp.Body)
 		defer resp.Body.Close()
 	}
-	if resp.StatusCode != http.StatusOK {
+	if resp.StatusCode >= http.StatusBadRequest {
 		return nil, fmt.Errorf(
 			"Response status code - %d \n %s", resp.StatusCode, responseBody)
 	}
