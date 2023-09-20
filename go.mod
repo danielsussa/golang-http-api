@@ -1,4 +1,4 @@
-module github.com/xntltd/golang-http-api
+module github.com/danielsussa/golang-http-api
 
 go 1.14
 
